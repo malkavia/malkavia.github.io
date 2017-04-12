@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Imagine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Imagine">
+<meta property="og:url" content="http://malkavia.github.io/index.html">
+<meta property="og:site_name" content="Imagine">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Imagine">
+  
+    <link rel="alternate" href="/atom.xml" title="Imagine" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Imagine</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://malkavia.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Cordova-Overview" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/11/Cordova-Overview/" class="article-date">
+  <time datetime="2017-04-11T14:22:20.000Z" itemprop="datePublished">2017-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><p><strong>Apache Cordova</strong>是一个开源的移动开发框架。它允许开发者使用传统Web技术：<code>HTML5</code>、<code>CSS3</code>以及<code>JavaScript</code>来构建跨平台的App应用。应用程序被包装起来，并在各自的平台上运行。同时，利用标准兼容的API来使用设备的功能，如传感器、数据、网络等。</p>
+<p>#####如果你是以下几种情况，使用Cordova就再适合不过了</p>
+<ul>
+<li>您是一名移动应用开发者，想要将一个应用程序扩展至多个平台，而不希望在使用各自的平台上特定的语言和工具集来重新实现。</li>
+<li>您是一名Web开发者，想要将自己的Web应用打包成App，并在各个应用商店中上架。</li>
+<li>您是一名移动应用开发者，想要将Webview与原生应用组件结合，以访问设备级API，或是在原生应用和WebView之间开发插件等。</li>
+</ul>
+<h1 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h1><p>一个cordova应用中包含了多个组件，下图展示了cordova应用的架构总览。<br><img src="http://cordova.apache.org/static/img/guide/cordovaapparchitecture.png" alt="Cordova Architecture"></p>
+<h1 id="WebView"><a href="#WebView" class="headerlink" title="WebView"></a>WebView</h1><p>启用了Cordova的WebView可以为应用提供整个用户界面。在某些平台上，它同时可以作为一部分组件，与原生组件相结合，构成规模更大的混合应用程序。</p>
+<h1 id="Web-App"><a href="#Web-App" class="headerlink" title="Web App"></a>Web App</h1><p>这是由应用程序代码所构成的部分。应用本身由类似网页的方式实现，加载了CSS、Javascript、图片资源、多媒体资源等，默认通过一个命名为<em>index.xml</em>的文件作为入口运行。应用程序所在的WebView被包装在一个原声容器中运行，该容器则作为最终的App，被发布到各个应用市场当中。<br>在容器中有一个至关重要的文件：config.xml文件，它提供了程序的基本信息，并可以通过设定不同的参数影响程序的实际运行，如是否支持横屏模式等。</p>
+<h1 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h1><p>插件是cordova程序中的一个重要部分。它们为cordova和原生组件之间提供了接口，使其不仅可以进行数据交换，还可以调用设备的标准API，使得通过JavaScript调用原生代码变为了可能。<br>Apache Cordova项目维护了一组名为Core Plugin的插件，这些核心插件可以使应用程序直接使用设备的功能，如电池、摄像头、联系人等。<br>除了这些核心插件之外，还有一些第三方插件为不同的平台提供着额外的功能。您可以使用Cordova的插件搜索功能或者npm来搜索所需的插件，还可以根据&lt;插件开发指南&gt;开发自己的插件。有些功能，如corfova与原生的自定义的组件之间进行通信，是必须依赖于插件的。<br><strong>注意：</strong> 创建Cordova项目时，它不包含任何插件。任何插件都都必须明确的添加。<br>Cordova不提供任何UI小部件或MV*框架。Cordova只提供可以被执行的部分(runtime)。如果您希望使用UI小部件或MV*框架，则需要将它们置于你的原生代码中。</p>
+<h1 id="Development-Paths"><a href="#Development-Paths" class="headerlink" title="Development Paths"></a>Development Paths</h1><p>Cordova为您提供了两种方式来创建一个移动应用，你可以使用任一种方式来完成相同的任务，它们分别具有以下特点：</p>
+<ul>
+<li><strong>跨平台工作流（Cross-platform (CLI) workflow）</strong>：如果你想要你的应用能够在尽可能多的移动平台上运行，同时不希望有针对于不同平台而特定的开发工作，则可以使用这种方式。这种方式围绕着cordova CLI展开。CLI是一种可以使你一次性为多个平台构建项目的高级工具，它抽取了低级shell脚本的大部分功能。CLI将Web资源复制到每个移动平台的子目录中，并针对每个字目录做对应的配置更改，以适配各自的平台，最终通过构建脚本来生成二进制文件。CLI还提供了一个界面来管理应用中所用的插件。如果您没有以平台为中心的工作流等特殊需求，建议使用跨平台工作流来构建您的应用。</li>
+<li><strong>平台为中心的工作流（Platform-centered workflow）</strong>：如果您主要是为某单个平台构建应用程序，并且需要在较低层上进行修改，建议使用这种开发方式。例如：您希望将您的原生自定义组件宇Cordova组件相结合，如<a href="http://cordova.apache.org/docs/en/latest/guide/hybrid/webviews/index.html" target="_blank" rel="external">Embedding WebViews</a>中所述，或者需要在SDK中修改项目等。这种工作流需要一组定制的底层的shell脚本为每一个运行平台进行构建，同时需要特殊的插件管理程序为各个平台管理插件。因此，虽然使用这种开发方式也可以构建跨平台的应用，但是通常来说会更复杂。</li>
+</ul>
+<p>首次使用Cordova时，采用跨平台工作流创建应用程序可能更为简单，如<a href="http://cordova.apache.org/docs/en/latest/guide/cli/index.html" target="_blank" rel="external">创建你的第一个Cordova程序</a>中所展示的那样。如果你需要SDK提供更大的控制权，则请使用以平台为中心的工作流。</p>
+<blockquote>
+<p> <strong>注意</strong>： 一旦将工程由CLI工作流切换为以平台为中心的工作流后，将无法还原成CLI工作流。CLI中包含了一组通用的跨平台的代码，以便在各自的平台上构建。在切换到以平台为中心的工作流后，这些跨平台的代码将被平台特定的代码所替换。</p>
+</blockquote>
+<h1 id="安装Cordova"><a href="#安装Cordova" class="headerlink" title="安装Cordova"></a>安装Cordova</h1><p>根据您选择的开发方式，Cordova的安装方式也有所不同：</p>
+<ul>
+<li>跨平台工作流：请参阅<a href="http://cordova.apache.org/docs/en/latest/guide/cli/index.html" target="_blank" rel="external">创建你的第一个Cordova程序</a></li>
+<li>以平台为中心的工作流</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://malkavia.github.io/2017/04/11/Cordova-Overview/" data-id="cj1edc63z0000691ta6y5kpnx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/11/Cordova-Overview/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Qihaoxa<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
