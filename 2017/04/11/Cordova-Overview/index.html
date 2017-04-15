@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Imagine">
 <meta property="og:description" content="Apache Cordova是一个开源的移动开发框架。它允许开发者使用传统Web技术：HTML5、CSS3以及JavaScript来构建跨平台的App应用。应用程序被包装起来，并在各自的平台上运行。同时，利用标准兼容的API来使用设备的功能，如传感器、数据、网络等。 如果你是以下几种情况，使用Cordova就再适合不过了 您是一名移动应用开发者，想要将一个应用程序扩展至多个平台，而不希望在使用各自">
 <meta property="og:image" content="http://cordova.apache.org/static/img/guide/cordovaapparchitecture.png">
-<meta property="og:updated_time" content="2017-04-12T03:35:46.000Z">
+<meta property="og:updated_time" content="2017-04-15T16:52:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cordova概览">
 <meta name="twitter:description" content="Apache Cordova是一个开源的移动开发框架。它允许开发者使用传统Web技术：HTML5、CSS3以及JavaScript来构建跨平台的App应用。应用程序被包装起来，并在各自的平台上运行。同时，利用标准兼容的API来使用设备的功能，如传感器、数据、网络等。 如果你是以下几种情况，使用Cordova就再适合不过了 您是一名移动应用开发者，想要将一个应用程序扩展至多个平台，而不希望在使用各自">
@@ -69,13 +69,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="weibo" target="_blank" href="http://www.weibo.com/malkavia" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/malkavia/answers" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="mailto:malkavia@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -108,13 +106,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="weibo" target="_blank" href="http://www.weibo.com/malkavia" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/malkavia/answers" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="mailto:malkavia@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -165,7 +161,7 @@
 <li>您是一名移动应用开发者，想要将Webview与原生应用组件结合，以访问设备级API，或是在原生应用和WebView之间开发插件等。</li>
 </ul>
 <h1 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h1><p>一个cordova应用中包含了多个组件，下图展示了cordova应用的架构总览。<br><img src="http://cordova.apache.org/static/img/guide/cordovaapparchitecture.png" alt="Cordova Architecture"></p>
-<h1 id="WebView"><a href="#WebView" class="headerlink" title="WebView"></a>WebView</h1><p>启用了Cordova的WebView可以为应用提供整个用户界面。在某些平台上，它同时可以作为一部分组件，与原生组件相结合，构成规模更大的混合应用程序。</p>
+<h1 id="WebView"><a href="#WebView" class="headerlink" title="WebView"></a>WebView</h1><p>启用了Cordova的WebView可以为应用提供整个用户界面。在某些平台上，它同时可以作为一部分组件，与原生组件相结合，构成规模更大的混合应用程序。<br><a id="more"></a></p>
 <h1 id="Web-App"><a href="#Web-App" class="headerlink" title="Web App"></a>Web App</h1><p>这是由应用程序代码所构成的部分。应用本身由类似网页的方式实现，加载了CSS、Javascript、图片资源、多媒体资源等，默认通过一个命名为<em>index.xml</em>的文件作为入口运行。应用程序所在的WebView被包装在一个原声容器中运行，该容器则作为最终的App，被发布到各个应用市场当中。<br>在容器中有一个至关重要的文件：config.xml文件，它提供了程序的基本信息，并可以通过设定不同的参数影响程序的实际运行，如是否支持横屏模式等。</p>
 <h1 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h1><p>插件是cordova程序中的一个重要部分。它们为cordova和原生组件之间提供了接口，使其不仅可以进行数据交换，还可以调用设备的标准API，使得通过JavaScript调用原生代码变为了可能。<br>Apache Cordova项目维护了一组名为Core Plugin的插件，这些核心插件可以使应用程序直接使用设备的功能，如电池、摄像头、联系人等。<br>除了这些核心插件之外，还有一些第三方插件为不同的平台提供着额外的功能。您可以使用Cordova的插件搜索功能或者npm来搜索所需的插件，还可以根据&lt;插件开发指南&gt;开发自己的插件。有些功能，如corfova与原生的自定义的组件之间进行通信，是必须依赖于插件的。<br><strong>注意：</strong> 创建Cordova项目时，它不包含任何插件。任何插件都都必须明确的添加。<br>Cordova不提供任何UI小部件或MV*框架。Cordova只提供可以被执行的部分(runtime)。如果您希望使用UI小部件或MV*框架，则需要将它们置于你的原生代码中。</p>
 <h1 id="Development-Paths"><a href="#Development-Paths" class="headerlink" title="Development Paths"></a>Development Paths</h1><p>Cordova为您提供了两种方式来创建一个移动应用，你可以使用任一种方式来完成相同的任务，它们分别具有以下特点：</p>
@@ -222,6 +218,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/15/ionic0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从零开始，使用ionic构建Android Hybrid App（0）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 
 

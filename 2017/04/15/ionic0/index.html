@@ -6,14 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://malkavia.github.io">
-  <title>Archives: 2017/4 | Imagine</title>
+  <title>从零开始，使用ionic构建Android Hybrid App（0） | Imagine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Imagine">
-<meta property="og:url" content="http://malkavia.github.io/archives/2017/04/index.html">
+  <meta name="description" content="由于公司决定了今后的移动终端上的开发方式由原生转变为HTML5，在过去的一个星期里，我们三人探坑小组告别了熟悉的Android Studio、Xcode，结识了一系列新鲜的前端名词：Cordova、Vue、React、AngularJS、Babel、Webpack、Broserify、ionic、等等等等。经过了无数次的三观尽毁，最终选用了ionic作为开发框架。其最吸引我们的一点是，仅用几个简单">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始，使用ionic构建Android Hybrid App（0）">
+<meta property="og:url" content="http://malkavia.github.io/2017/04/15/ionic0/index.html">
 <meta property="og:site_name" content="Imagine">
+<meta property="og:description" content="由于公司决定了今后的移动终端上的开发方式由原生转变为HTML5，在过去的一个星期里，我们三人探坑小组告别了熟悉的Android Studio、Xcode，结识了一系列新鲜的前端名词：Cordova、Vue、React、AngularJS、Babel、Webpack、Broserify、ionic、等等等等。经过了无数次的三观尽毁，最终选用了ionic作为开发框架。其最吸引我们的一点是，仅用几个简单">
+<meta property="og:image" content="http://oogh1qs6u.bkt.clouddn.com/ionic.png">
+<meta property="og:image" content="http://oogh1qs6u.bkt.clouddn.com/nodejs.jpeg">
+<meta property="og:image" content="http://oogh1qs6u.bkt.clouddn.com/node.PNG">
+<meta property="og:image" content="http://oogh1qs6u.bkt.clouddn.com/install.PNG">
+<meta property="og:image" content="http://oogh1qs6u.bkt.clouddn.com/start.PNG">
+<meta property="og:image" content="http://oogh1qs6u.bkt.clouddn.com/error.PNG">
+<meta property="og:image" content="http://oogh1qs6u.bkt.clouddn.com/show.png">
+<meta property="og:updated_time" content="2017-04-15T16:50:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Imagine">
+<meta name="twitter:title" content="从零开始，使用ionic构建Android Hybrid App（0）">
+<meta name="twitter:description" content="由于公司决定了今后的移动终端上的开发方式由原生转变为HTML5，在过去的一个星期里，我们三人探坑小组告别了熟悉的Android Studio、Xcode，结识了一系列新鲜的前端名词：Cordova、Vue、React、AngularJS、Babel、Webpack、Broserify、ionic、等等等等。经过了无数次的三观尽毁，最终选用了ionic作为开发框架。其最吸引我们的一点是，仅用几个简单">
+<meta name="twitter:image" content="http://oogh1qs6u.bkt.clouddn.com/ionic.png">
   
     <link rel="alternative" href="/atom.xml" title="Imagine" type="application/atom+xml">
   
@@ -127,76 +140,122 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-ionic0" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      从零开始，使用ionic构建Android Hybrid App（0）
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/15/ionic0/" class="archive-article-date">
+
+        
+        <a href="/2017/04/15/ionic0/" class="archive-article-date">
   	<time datetime="2017-04-15T12:05:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-15</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/15/ionic0/">从零开始，使用ionic构建Android Hybrid App（0）</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由于公司决定了今后的移动终端上的开发方式由原生转变为HTML5，在过去的一个星期里，我们三人探坑小组告别了熟悉的Android Studio、Xcode，结识了一系列新鲜的前端名词：Cordova、Vue、React、AngularJS、Babel、Webpack、Broserify、ionic、等等等等。经过了无数次的三观尽毁，最终选用了ionic作为开发框架。其最吸引我们的一点是，仅用几个简单的步骤，就可以将Demo完美的运行在了手机上。</p>
+<h1 id="ionic-是什么"><a href="#ionic-是什么" class="headerlink" title="ionic 是什么"></a>ionic 是什么</h1><p>根据wikipedia：</p>
+<blockquote>
+<p>ionic是一个用来开发混合手机应用的，开源的，免费的代码库。 可以优化html、css和js的性能，构建高效的应用程序，而且还可以用于构建Sass和AngularJS的优化。 ionic会是一个可以信赖的框架。 是一个专注于用WEB开发技术，基于HTML5创建类似于手机平台原生应用的一个开发框架。</p>
+</blockquote>
+<p>对于写了几年Android代码，但从未接触过前端技术的我来说，上面这个定义就像是当年高数课本里面的定义一样难懂。在短短几天的学习过后，我对于ionic的理解就是：这是一个魔法包裹，包裹里面含有着一些名叫Cordova、AngularJS等等不知道是做什么用的东西，然而，只要把不同的元素加到这个包裹里，然后用一条简单的命令行，这个包裹就biu~的一下变成了Android apk。</p>
+<p><img src="http://oogh1qs6u.bkt.clouddn.com/ionic.png" alt=""></p>
+<a id="more"></a>
+<h1 id="为什么使用ionic"><a href="#为什么使用ionic" class="headerlink" title="为什么使用ionic"></a>为什么使用ionic</h1><p>ionic起初并非是我们的首选，在上面列了那么一大堆的”新”前端名词中，Vue、React等都是可以直接拿来构建混合应用的框架，我们也进行了多次的尝试，跑过了各种各样的Demo。然而最终，ionic以它的简单的上手难度、丰富的社区资源、优秀的官方Demo征服了我们。</p>
+<p>下面就来一起欣赏一下ionic的官方Demo。</p>
+<h1 id="开始第一个ionic应用"><a href="#开始第一个ionic应用" class="headerlink" title="开始第一个ionic应用"></a>开始第一个ionic应用</h1><p>借于ionic团队所做的高度集成，使得我们只需做少量的安装与配置，即可以运行我们的第一个应用程序。其大致步骤是：安装node.js - 安装ionic - 创建项目 - 运行项目，仅需4步，即可在浏览器上看到我们的第一个ionic应用了。如需打包成apk并在手机上运行的话，也仅需少数几步安装配置即可，我们会在后面的文章中再来进一步描述。</p>
+<h2 id="Step1-安装Node-js"><a href="#Step1-安装Node-js" class="headerlink" title="Step1. 安装Node.js"></a>Step1. 安装Node.js</h2><p><img src="http://oogh1qs6u.bkt.clouddn.com/nodejs.jpeg" alt=""></p>
+<p>在<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js的官网</a>下载并安装合适的Node.js版本，我选用的是最新的稳定版本(v6.10.2 LTS)。</p>
+<p><img src="http://oogh1qs6u.bkt.clouddn.com/node.PNG" alt=""><br>安装完成后，在命令行环境中，输入<code>node -v</code>查看Node.js的版本。</p>
+<h2 id="Step2，安装ionic"><a href="#Step2，安装ionic" class="headerlink" title="Step2，安装ionic"></a>Step2，安装ionic</h2><p>在命令行中，输入<code>npm install -g cordova ionic</code>安装ionic。<br><img src="http://oogh1qs6u.bkt.clouddn.com/install.PNG" alt=""></p>
+<p>在该命令中，npm install是安装Node包的通用命令，而cordova、ionic为资源包的名字。 -g 为 –global 的缩写，意味着在全局Node.js环境中安装该资源包，此后可以在电脑的任何位置使用资源包中的命令。这一步可能会消耗较长时间，至少我是等到了怀疑人生：）</p>
+<blockquote>
+<p>npm（全称Node Package Manager，即node包管理器）是Node.js默认的、以JavaScript编写的软件包管理系统。–wikipedia</p>
+<p>查看更多关于npm的介绍，建议查看阮一峰的博文：<a href="http://www.ruanyifeng.com/blog/2016/01/npm-install.html" target="_blank" rel="external">npm 模块安装机制简介</a></p>
+</blockquote>
+<h2 id="Step3，创建一个ionic应用"><a href="#Step3，创建一个ionic应用" class="headerlink" title="Step3，创建一个ionic应用"></a>Step3，创建一个ionic应用</h2><p>在命令行中，首先进入到存放工程文件的目录中，再输入<code>ionic start --v2 myApp tabs</code>，在当前目录下，生成一个名为myApp的ionic模版工程。</p>
+<p>在这一步中，命令行中会提示，将会花费1～2分钟的时间，嗯，骗人的。</p>
+<p><img src="http://oogh1qs6u.bkt.clouddn.com/start.PNG" alt=""></p>
+<blockquote>
+<p>还可以使用<code>ionic start myApp blank --v2</code>或<code>ionic start myApp sidemenu --v2</code>生成空白应用或带侧边菜单的示例应用。</p>
+<p>在虚拟机上重新运行的时候，产生了这样一个报错，而且原因不明，so，还是珍爱生命，远离Windows吧。<br><img src="http://oogh1qs6u.bkt.clouddn.com/error.PNG" alt=""></p>
+</blockquote>
+<h2 id="Step4，Run！"><a href="#Step4，Run！" class="headerlink" title="Step4，Run！"></a>Step4，Run！</h2><p>在命令行的光标再次闪动的时候，这说明我们的第一个ionic程序已经准备就绪了，输入<code>cd myApp</code>进入到工程目录中，再敲 <code>ionic serve</code>，静待浏览器的自动打开，我们的第一个ionic程序就呈现在眼前了。在Chrome中使用手机模式查看，即可看到程序在手机中的呈现情况了.<br><img src="http://oogh1qs6u.bkt.clouddn.com/show.png" alt=""><br>若想在真机中查看这个ionic程序，请期待下一篇博文。</p>
+<blockquote>
+<p>对于使用Windows作为开发环境的开发者，ionic官方推荐使用<a href="https://www.visualstudio.com/cordova-vs?wt.mc_id=o~display~ionic~dn948185" target="_blank" rel="external">Visual Studio Community</a>作为开发环境，其中包括了所有的相关组件和新手模版。</p>
+<p>我试用了一下，觉得有点”重”，于是还是放弃了，还是自己折腾的好：）</p>
+</blockquote>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/Cordova-Overview/" class="archive-article-date">
-  	<time datetime="2017-04-11T14:22:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/Cordova-Overview/">Cordova概览</a>
-    </h1>
+    <a href="/2017/04/11/Cordova-Overview/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Cordova概览
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -219,8 +278,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
